@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StorageSync</class>
+ <widget class="QMainWindow" name="StorageSync">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>StorageSync</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTreeWidget" name="treeWidgetLeft">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <attribute name="headerDefaultSectionSize">
+         <number>180</number>
+        </attribute>
+        <attribute name="headerMinimumSectionSize">
+         <number>40</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Size</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignLeading|AlignVCenter</set>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Date</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QTreeWidget" name="treeWidgetRight">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <attribute name="headerDefaultSectionSize">
+         <number>180</number>
+        </attribute>
+        <attribute name="headerMinimumSectionSize">
+         <number>40</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Size</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignLeading|AlignVCenter</set>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Date</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuLeft">
+    <property name="title">
+     <string>Left</string>
+    </property>
+    <addaction name="actionOpenPathLeft"/>
+    <addaction name="actionOpenJSONLeft"/>
+    <addaction name="actionSaveJSONLeft"/>
+   </widget>
+   <widget class="QMenu" name="menuRight">
+    <property name="title">
+     <string>Right</string>
+    </property>
+    <addaction name="actionOpenPathRight"/>
+    <addaction name="actionOpenJSONRight"/>
+    <addaction name="actionSaveJSONRight"/>
+   </widget>
+   <widget class="QMenu" name="menuActions">
+    <property name="title">
+     <string>Diff</string>
+    </property>
+    <addaction name="actionCompare"/>
+    <addaction name="actionBy_Size"/>
+    <addaction name="actionBy_Date"/>
+    <addaction name="actionDate"/>
+    <addaction name="actionAll"/>
+    <addaction name="separator"/>
+    <addaction name="actionRefresh"/>
+   </widget>
+   <addaction name="menuLeft"/>
+   <addaction name="menuActions"/>
+   <addaction name="menuRight"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="sizeGripEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <action name="actionOpenPathLeft">
+   <property name="text">
+    <string>Open Path</string>
+   </property>
+  </action>
+  <action name="actionOpenJSONLeft">
+   <property name="text">
+    <string>Open JSON</string>
+   </property>
+  </action>
+  <action name="actionSaveJSONLeft">
+   <property name="text">
+    <string>Save JSON</string>
+   </property>
+  </action>
+  <action name="actionOpenPathRight">
+   <property name="text">
+    <string>Open Path</string>
+   </property>
+  </action>
+  <action name="actionOpenJSONRight">
+   <property name="text">
+    <string>Open JSON</string>
+   </property>
+  </action>
+  <action name="actionSaveJSONRight">
+   <property name="text">
+    <string>Save JSON</string>
+   </property>
+  </action>
+  <action name="actionCompare">
+   <property name="text">
+    <string>All</string>
+   </property>
+  </action>
+  <action name="actionBy_Size">
+   <property name="text">
+    <string>Path</string>
+   </property>
+  </action>
+  <action name="actionBy_Date">
+   <property name="text">
+    <string>Name</string>
+   </property>
+  </action>
+  <action name="actionDate">
+   <property name="text">
+    <string>Size</string>
+   </property>
+  </action>
+  <action name="actionAll">
+   <property name="text">
+    <string>Date</string>
+   </property>
+  </action>
+  <action name="actionRefresh">
+   <property name="text">
+    <string>Refresh</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
